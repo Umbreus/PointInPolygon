@@ -62,7 +62,8 @@ public class GuiHandler
 
         if(drawMode == false){
             polytest = new PointInPolygon(points);
-            this.jpanel.DrawPoly(points);
+            label.setText("Drag mouse to test points");
+            jpanel.DrawPoly(points);
         }
     }
 
