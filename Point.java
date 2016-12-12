@@ -16,7 +16,6 @@ public class Point
      */
     public Point(double xCoord, double yCoord)
     {
-        // initialise instance variables
         x = xCoord;
         y = yCoord;
     }

@@ -4,7 +4,7 @@
  * 
  * @author  Matthew Dutton
  * @author  Dan Sunday
- * @version 9/11/16
+ * @version 12/12/16
  */
 public class PointInPolygon
 {
@@ -24,6 +24,7 @@ public class PointInPolygon
      * Returns an array of Points for the vertices of the polygon given a set of ordered points
      * 
      * @param  boundary The ordered set of boundary points for the shape 
+     * @return          The array of Points for the given input
      */
     private Point[] getVertices(double[][] boundary)
     {
@@ -53,7 +54,6 @@ public class PointInPolygon
      */
     public boolean checkPoint(Point p){
         return wn_PnPoly( p, polygon, polygon.length ) != 0;
-        //TODO: check if n needs to be changed. Also see if wn algorithm needs wraparound on the P array
     }
     
     /**
@@ -88,6 +88,8 @@ public class PointInPolygon
     }
 
     /** 
+     *  !!! This method is not used in this program, but is included and implemented for completeness
+     *  
      *  cn_PnPoly(): crossing number test for a point in a polygon
      *  
      *  Input:   P = a point,
